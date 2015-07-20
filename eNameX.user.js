@@ -78,7 +78,7 @@ $(document).ready(function () {
   $('table.com_table tr:gt(0)').each(function () {
     if ($(this).children('td:eq(7)').length > 0) {
       var priceList = $(this).children('td:eq(5)');
-    } else {
+    } else if ($(this).children('td:eq(6)').length > 0) {
       priceList = $(this).children('td:eq(4)');
     }
     priceList.text('￥' + formatPrice(priceList.text().replace('元', ''))).css({
